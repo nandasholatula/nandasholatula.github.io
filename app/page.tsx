@@ -23,16 +23,15 @@ const Home = () => {
     name: 'My Page Title'
   };
   return (
-    <div className={`relative ${data.showCursor ? "cursor-none" : ""}`}>
-      <Head>
+    <div className={` ${data.showCursor ? "cursor-none" : ""}`}>
+            <Head>
         <title>{data.name}</title>
       </Head>
 
       <div className="gradientcircle"></div>
-      <div className="gradientcirclebottom"></div>
 
       <div className="container mx-auto mb-10">
-        {/* Add your content here */}
+       Siap Tempur
       </div>
 
     </div>
