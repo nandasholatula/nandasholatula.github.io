@@ -12,8 +12,8 @@ import Socials from "../components/Socials";
 import portfolioData from "../data/portfolio.json";
 import { Inter } from "next/font/google";
 
-// Import styles (assumed to be in a CSS module or a global stylesheet)
-import styles from "../styles/globals.css";
+// Import global styles
+import "../styles/globals.css"; // Adjust this path if necessary
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,8 +28,8 @@ const Home = () => {
         <title>{data.name}</title>
       </Head>
 
-      <div className={styles.gradientcircle}></div>
-      <div className={styles.gradientcirclebottom}></div>
+      <div className="gradientcircle"></div>
+      <div className="gradientcirclebottom"></div>
 
       <div className="container mx-auto mb-10">
         {/* Add your content here */}
