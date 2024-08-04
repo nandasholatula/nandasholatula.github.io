@@ -12,7 +12,7 @@ body {
   @apply dark:bg-black dark:text-white;
 }
 
-.gradient-circle {
+.gradientcircle {
   position: absolute;
   pointer-events: none;
   z-index: 100;
@@ -27,7 +27,7 @@ body {
     rgba(107, 107, 248, 0.8) 100%
   );
 }
-.gradient-circle-bottom {
+.gradientcirclebottom {
   position: absolute;
   pointer-events: none;
   z-index: 100;
