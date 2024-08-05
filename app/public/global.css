@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+.font-doodle {
+  font-family:Gochi Hand,cursive
+}
+
+.gradientcircle {
+  position: absolute;
+  pointer-events: none;
+  z-index: 100;
+  top: -30px;
+  height: 40px;
+  width: 100vw;
+  opacity: 0.5;
+  filter: blur(40px);
+  background: radial-gradient(
+    circle,
+    rgba(248, 107, 223, 1) 0%,
+    rgba(107, 107, 248, 0.8) 100%
+  );
+}
+.gradientcirclebottom {
+  position: absolute;
+  pointer-events: none;
+  z-index: 100;
+  bottom: -20px;
+  height: 30px;
+  width: 100vw;
+  opacity: 0.5;
+  filter: blur(40px);
+  background: radial-gradient(
+    circle,
+    rgba(248, 107, 223, 1) 0%,
+    rgba(107, 107, 248, 0.8) 100%
+  );
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #0070f3;
+  transition: color 0.2s;
+}
+
+nav ul li a:hover {
+  color: #0056b3;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+section p {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #666;
+}
+
+.posts {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.post {
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.post h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #0070f3;
+}
+
+.post p {
+  font-size: 1rem;
+  color: #333;
+}
+
+.contact {
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contact a {
+  color: #0070f3;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.contact a:hover {
+  color: #0056b3;
+}

@@ -1,41 +1,21 @@
-"use client"; // This is a client component 👈🏽
-
-import { useRef, useState } from "react";
+import react from "react";
 
 import Image from "next/image";
-import Footer from "../components/Footer";
-import Head from "next/head";
-import Button from "../components/Button";
-import Link from "next/link";
+import  Navigation  from "../app/components/navbar";
+import  PageOne  from "../app/components/page-one";
+import "./public/global.css";
+import Homebg from './assets/home/home-bg.jpg'; // Adjust the path as needed
 
-import Socials from "../components/Socials";
-import portfolioData from "../data/portfolio.json";
-import { Inter } from "next/font/google";
 
-// Import global styles
-import "../styles/globals.css"; // Adjust this path if necessary
+export default function Home() {
 
-const inter = Inter({ subsets: ["latin"] });
 
-const Home = () => {
-  const data = {
-    showCursor: true,
-    name: 'My Page Title'
-  };
   return (
-    <div className={` ${data.showCursor ? "cursor-none" : ""}`}>
-            <Head>
-        <title>{data.name}</title>
-      </Head>
+    <div >
 
+      <Navigation />
       <div className="gradientcircle"></div>
-
-      <div className="container mx-auto mb-10">
-       Siap Tempur
-      </div>
 
     </div>
   );
-};
-
-export default Home;
+}
