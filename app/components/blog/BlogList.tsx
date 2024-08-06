@@ -1,6 +1,5 @@
 // components/blog/BlogList.js
 import React from 'react';
-import BlogItem from './BlogItem';
 import Image from "next/image";
 
 
