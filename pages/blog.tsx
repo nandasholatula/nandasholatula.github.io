@@ -1,3 +1,4 @@
+// ./pages/blog.tsx
 import React from 'react';
 import Image from 'next/image';
 import Navigation from '../app/components/navbar';
@@ -7,7 +8,17 @@ import Link from 'next/link';
 import BlogList from '../app/components/blog/BlogList';
 import axios from 'axios';
 
-const Blog = ({ posts }) => {
+interface Post {
+    id: string;
+    judul: string;
+    linkimage: string;
+}
+
+interface BlogProps {
+    posts: Post[];
+}
+
+const Blog: React.FC<BlogProps> = ({ posts }) => {
     return (
         <div>
             <Navigation />
@@ -19,30 +30,23 @@ const Blog = ({ posts }) => {
                             <h1 className="font-doodle h-20 lg:h-auto tracking-widest xl:text-4xl text-3xl text-center xl:text-left underline">
                                 Blog.
                             </h1>
-                            
                         </div>
                         <div className="xl:w-5/12 flex xl:justify-end justify-center h-80 ">
                         </div>
-
                     </div>
-
-
                 </div>
-                <BlogList key={posts.id}  posts={posts} />
+                <BlogList posts={posts} />
             </div>
-            
 
             <div className="gradientcircle"></div>
-
-            
         </div>
     );
-}
+};
 
 export async function getStaticProps() {
     try {
         const response = await axios.get('https://blogapi-bice-gamma.vercel.app/api/blogs');
-        const posts = response.data.result; // Adjust based on your actual API response structure
+        const posts: Post[] = response.data.result; // Adjust based on your actual API response structure
 
         return {
             props: {
