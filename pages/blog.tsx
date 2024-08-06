@@ -28,7 +28,7 @@ const Blog = ({ posts }) => {
 
 
                 </div>
-                <BlogList posts={posts} />
+                <BlogList key={posts.id}  posts={posts} />
             </div>
             
 
