@@ -24,7 +24,7 @@ export default function Home() {
                 Saya seorang fullstack developer dari Bogor. Menikmati membangun semuanya dari situs app kecil hingga app yang elegan. 
               </p>
               
-              Lihat <a className="bg-black text-white px-6 py-3 rounded-full">Portfolio Saya</a> dan juga <a href="https://drive.google.com/file/d/1dw1S9axb2fEKqWFbdm9nAoKaOqm0rakN/view?usp=sharing" target="_blank"><span className="font-semibold underline">Unduh CV</span></a> Saya
+              Lihat <a href="#"><span className="font-semibold underline">Portfolio Saya</span></a> dan juga <a href="https://drive.google.com/file/d/1dw1S9axb2fEKqWFbdm9nAoKaOqm0rakN/view?usp=sharing" target="_blank"><span className="font-semibold underline">Unduh CV</span></a> Saya
               
             </div>
             <div className="xl:w-5/12 flex xl:justify-end justify-center h-80 ">
