@@ -1,35 +1,37 @@
-import React, { useState, useEffect } from 'react';
-import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
+import React, { useState } from "react"; 
+import Link from 'next/link';
+import { useRouter } from "next/router";
+import Router from "next/router";
 
-const Navbar = () => {
+export default function Navbar() {
 
   // Array containing navigation items
   const navItems = [
-    { id: 1, text: 'Home', url:'/' },
-    { id: 2, text: 'Blog', url:'blog' },
-   
+    { id: 1, text: 'Home', url: '/' },
+    { id: 2, text: 'Blog', url: '/blog' },
   ];
 
   return (
-    <nav className='sticky top-0 z-10  backdrop-blur-lg  flex justify-between items-center h-15  mx-auto px-4 text-white w-full'>
+    <nav className='xl:px-60 px-8'>
       {/* Logo */}
-      
-      <h1 className='font-doodle w-full text-3xl font-bold text-[#00df9a]'>PFLIP.</h1>
+      <div className='flex items-center justify-between'>
+        <h5 className='font-doodle text-2xl mr-8 cursor-pointer tracking-widest'>Akabaru.</h5>
 
-      {/* Desktop Navigation */}
-      <ul className='hidden md:flex'>
+        {/* Desktop Navigation */}
+        <ul className='hidden md:flex'>
           {navItems.map(item => (
-              <li key={item.id}>
-                <a href={item.url} className="block text-[#00df9a] hover:bg-gray-900 px-3 py-2 rounded">{item.text}</a>
-              </li>
+            <li key={item.id}>
+              <Link href={item.url} className="cursor-pointer hover:bg-gray-300 dark:text-gray-300 dark:hover:bg-zinc-900">
+                {item.text}
+              </Link>
+            </li>
           ))}
+        </ul>
 
-            
-      </ul>
-
-      
+      </div>
     </nav>
+
+    
   );
 };
 
-export default Navbar;

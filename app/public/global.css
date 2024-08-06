@@ -14,13 +14,21 @@ body {
   font-family:Gochi Hand,cursive
 }
 
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+.tracking-widest {
+  letter-spacing: .1em;
+}
+
 .gradientcircle {
   position: absolute;
   pointer-events: none;
   z-index: 100;
   top: -30px;
   height: 40px;
-  width: 100vw;
+  width: 100%;
   opacity: 0.5;
   filter: blur(40px);
   background: radial-gradient(
@@ -28,28 +36,6 @@ body {
     rgba(248, 107, 223, 1) 0%,
     rgba(107, 107, 248, 0.8) 100%
   );
-}
-.gradientcirclebottom {
-  position: absolute;
-  pointer-events: none;
-  z-index: 100;
-  bottom: -20px;
-  height: 30px;
-  width: 100vw;
-  opacity: 0.5;
-  filter: blur(40px);
-  background: radial-gradient(
-    circle,
-    rgba(248, 107, 223, 1) 0%,
-    rgba(107, 107, 248, 0.8) 100%
-  );
-}
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f9f9f9;
-  color: #333;
-  margin: 0;
-  padding: 0;
 }
 
 header {
@@ -75,7 +61,6 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  color: #0070f3;
   transition: color 0.2s;
 }
 
