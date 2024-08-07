@@ -1,4 +1,3 @@
-// ./pages/blog.tsx
 import React from 'react';
 import Image from 'next/image';
 import Navigation from '../app/components/navbar';
@@ -51,7 +50,7 @@ const Blog: React.FC<BlogProps> = ({ posts }) => {
     );
 };
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
     try {
         const response = await axios.get('https://blogapi-bice-gamma.vercel.app/api/blogs');
         const posts: Post[] = response.data.result; // Adjust based on your actual API response structure
