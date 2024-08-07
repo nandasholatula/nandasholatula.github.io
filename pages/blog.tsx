@@ -7,7 +7,7 @@ import Typewriter from 'typewriter-effect';
 import Link from 'next/link';
 import BlogList from '../app/components/blog/BlogList';
 import axios from 'axios';
-import Head from 'next/head';
+
 interface Post {
     id: string;
     judul: string;
@@ -18,17 +18,9 @@ interface BlogProps {
     posts: Post[];
 }
 
-
 const Blog: React.FC<BlogProps> = ({ posts }) => {
     return (
         <div>
-            <Head>
-                <title>Blog - Nanda Sholatul Akbar</title>
-                <meta charSet="utf-8" />
-                <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <meta name="description" content="Read our latest blog posts" />
-                <meta name="keywords" content="blog, articles, posts" />
-            </Head>
             <Navigation />
 
             <div className="relative main-body min-h-screen lg:pt-10 pt-10">
