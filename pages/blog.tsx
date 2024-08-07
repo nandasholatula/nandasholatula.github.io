@@ -1,5 +1,5 @@
 // ./pages/blog.tsx
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Navigation from '../app/components/navbar';
 import '../app/public/global.css';
@@ -7,6 +7,7 @@ import Typewriter from 'typewriter-effect';
 import Link from 'next/link';
 import BlogList from '../app/components/blog/BlogList';
 import axios from 'axios';
+import Head from 'next/head';
 
 interface Post {
     id: string;
@@ -14,13 +15,39 @@ interface Post {
     linkimage: string;
 }
 
-interface BlogProps {
-    posts: Post[];
-}
+const Blog: React.FC = () => {
+    const [posts, setPosts] = useState<Post[]>([]);
+    const [loading, setLoading] = useState(true);
 
-const Blog: React.FC<BlogProps> = ({ posts }) => {
+    useEffect(() => {
+        const fetchPosts = async () => {
+            try {
+                const response = await axios.get('https://blogapi-bice-gamma.vercel.app/api/blogs');
+                setPosts(response.data.result);
+            } catch (error) {
+                console.error('Error fetching blog posts:', error);
+                setPosts([]);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        fetchPosts();
+    }, []);
+
+    if (loading) {
+        return <div>Loading...</div>;
+    }
+
     return (
         <div>
+            <Head>
+                <title>Blog - Nanda Sholatul Akbar</title>
+                <meta charSet="utf-8" />
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <meta name="description" content="Read our latest blog posts" />
+                <meta name="keywords" content="blog, articles, posts" />
+            </Head>
             <Navigation />
 
             <div className="relative main-body min-h-screen lg:pt-10 pt-10">
@@ -42,25 +69,5 @@ const Blog: React.FC<BlogProps> = ({ posts }) => {
         </div>
     );
 };
-
-export async function getStaticProps() {
-    try {
-        const response = await axios.get('https://blogapi-bice-gamma.vercel.app/api/blogs');
-        const posts: Post[] = response.data.result; // Adjust based on your actual API response structure
-
-        return {
-            props: {
-                posts,
-            },
-        };
-    } catch (error) {
-        console.error('Error fetching blog posts:', error);
-        return {
-            props: {
-                posts: [], // Provide empty posts in case of an error
-            },
-        };
-    }
-}
 
 export default Blog;
