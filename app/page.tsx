@@ -5,6 +5,7 @@ import "./public/global.css";
 import Homebg from './assets/home/home-bg.jpg'; // Adjust the path as needed
 import profile from "./public/myprofil.webp";
 import Typewriter from 'typewriter-effect';
+import Link from 'next/link';
 
 export default function Home() {
 
@@ -24,7 +25,7 @@ export default function Home() {
                 Saya seorang fullstack developer dari Bogor. Menikmati membangun semuanya dari situs app kecil hingga app yang elegan. 
               </p>
               
-              Lihat <a href="/blog"><span className="font-semibold underline">Blog Saya</span></a> dan juga <a href="https://drive.google.com/file/d/1Y0lC6ZXi6fTVrFQpNQSOtvxyIfab5WjA/view" target="_blank"><span className="font-semibold underline">Unduh CV</span></a> Saya
+              Lihat <Link href="/blog"><span className="font-semibold underline">Blog Saya</span></Link> dan juga <a href="https://drive.google.com/file/d/1Y0lC6ZXi6fTVrFQpNQSOtvxyIfab5WjA/view" target="_blank"><span className="font-semibold underline">Unduh CV</span></a> Saya
               
             </div>
             <div className="xl:w-5/12 flex xl:justify-end justify-center h-80 ">
