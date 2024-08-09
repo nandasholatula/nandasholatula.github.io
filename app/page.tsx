@@ -27,6 +27,7 @@ export default function Home() {
               
               Lihat <Link href="/blog"><span className="font-semibold underline">Blog Saya</span></Link> dan juga <a href="https://drive.google.com/file/d/1Y0lC6ZXi6fTVrFQpNQSOtvxyIfab5WjA/view" target="_blank"><span className="font-semibold underline">Unduh CV</span></a> Saya
               
+              
             </div>
             <div className="xl:w-5/12 flex xl:justify-end justify-center h-80 ">
               <Image  src={profile} alt="Nanda Sholatul Akbar" width={300} height={300} objectFit="cover" className="rounded-full"  />
