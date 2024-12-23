@@ -25,7 +25,7 @@ export default function Home() {
                 Saya seorang fullstack developer dari Bogor. Menikmati membangun semuanya dari situs app kecil hingga app yang elegan. 
               </p>
               
-              Lihat <Link href="/blog"><span className="font-semibold underline">Blog Saya</span></Link> dan juga <a href="https://drive.google.com/file/d/1Y0lC6ZXi6fTVrFQpNQSOtvxyIfab5WjA/view" target="_blank"><span className="font-semibold underline">Unduh CV</span></a> Saya
+              Lihat <Link href="/blog"><span className="font-semibold underline">Blog Saya</span></Link> dan juga <a href="https://drive.google.com/file/d/1XMJ0NG1BV4uFloTICMgAdaSSpFdP-8-G/view" target="_blank"><span className="font-semibold underline">Unduh CV</span></a> Saya
               
               
             </div>
